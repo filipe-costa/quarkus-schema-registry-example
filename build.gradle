@@ -26,7 +26,14 @@ dependencies {
     implementation 'io.quarkus:quarkus-resteasy-reactive-jackson'
     implementation 'io.quarkus:quarkus-arc'
 
+
+    testImplementation("io.strimzi:strimzi-test-container:0.101.0") {
+        exclude group: "org.apache.logging.log4j", module: "log4j-core"
+    }
+
     testImplementation 'io.rest-assured:rest-assured'
+    // strimzi-test-container uses junit4 tests rules
+    testImplementation 'io.quarkus:quarkus-junit4:0.22.0'
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.quarkus:quarkus-rest-client-reactive'
     testImplementation 'org.awaitility:awaitility'

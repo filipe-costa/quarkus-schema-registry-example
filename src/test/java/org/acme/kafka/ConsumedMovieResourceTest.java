@@ -1,5 +1,6 @@
 package org.acme.kafka;
 
+import io.quarkus.test.common.QuarkusTestResource;
 import io.quarkus.test.common.http.TestHTTPResource;
 import io.quarkus.test.junit.QuarkusTest;
 import io.restassured.http.ContentType;
@@ -22,6 +23,7 @@ import static org.awaitility.Awaitility.await;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 @QuarkusTest
+@QuarkusTestResource(KafkaSchemaRegistryTestResource.class)
 public class ConsumedMovieResourceTest {
 
     @TestHTTPResource("/consumed-movies")
