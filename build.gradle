@@ -22,7 +22,6 @@ dependencies {
          exclude group: "jakarta.ws.rs", module: "jakarta.ws.rs-api"
      }
 
-//    implementation 'io.quarkus:quarkus-apicurio-registry-avro'
     implementation 'io.quarkus:quarkus-smallrye-reactive-messaging-kafka'
     implementation 'io.quarkus:quarkus-resteasy-reactive-jackson'
     implementation 'io.quarkus:quarkus-arc'
